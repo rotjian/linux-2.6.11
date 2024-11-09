@@ -239,7 +239,7 @@ sysenter_past_esp:
 
 	# system call handler stub
 ENTRY(system_call)
-	pushl %eax			# save orig_eax
+	pushl %eax			# save orig_eax. ## kernel stack 
 	SAVE_ALL
 	GET_THREAD_INFO(%ebp)
 					# system call tracing in operation
